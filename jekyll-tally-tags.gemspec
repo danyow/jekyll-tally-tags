@@ -22,9 +22,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency "jekyll", ">= 3.6", "< 5.0"
 
   spec.add_development_dependency "bundler"
-  spec.add_development_dependency "minitest"
-  spec.add_development_dependency "rake"
-  spec.add_development_dependency "rdoc"
-  spec.add_development_dependency "rubocop-jekyll", "~> 0.9"
-  spec.add_development_dependency "shoulda"
 end

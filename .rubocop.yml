@@ -1,17 +1,5 @@
-require: rubocop-jekyll
-
-inherit_gem:
-  rubocop-jekyll: .rubocop.yml
-
-
 AllCops:
   TargetRubyVersion: 2.4
-  Exclude:
-    - vendor/**/*
-
-Lint/ShadowingOuterLocalVariable:
-  Exclude:
-    - lib/jekyll-archives.rb
 
 Style/StringLiterals:
   Enabled: true
