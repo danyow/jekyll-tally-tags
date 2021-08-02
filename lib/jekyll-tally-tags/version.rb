@@ -5,7 +5,7 @@ require "jekyll"
 module Jekyll
   module TallyTags
 
-    VERSION = "0.1.2"
+    VERSION = "0.1.3"
 
     # Hooks
     NO_NAME    = %r!^(?>.+/)*?(\d{2,4}-\d{1,2}-\d{1,2})(-([^/]*))?(\.[^.]+)$!.freeze

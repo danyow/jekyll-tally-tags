@@ -137,10 +137,17 @@ module Jekyll
           end
         end
         # 把模板内自带有 `keys` 的加入进来
-        date_hash.each do |date, hash|
-          hash.each do |temp_key, csv_list|
+        date_hash.each do |date, csv_list|
+          date_hash[date] = {}
+          csv_list.each do |csv|
+            # lstrip rstrip 去掉前后空格
+            values = csv.gsub(/[，|,|\s]+/, " , ").split(',').each(&:lstrip!).each(&:rstrip!)
+            temp_key = values[0]
+            if !date_hash[date][temp_key]
+              date_hash[date][temp_key] = [csv]
+            end
             if templates[temp_key][KEYS]
-              csv_list.insert(0, templates[temp_key][KEYS].join(" "))
+              date_hash[date][temp_key].insert(0, templates[temp_key][KEYS].join(" "))
             end
           end
         end

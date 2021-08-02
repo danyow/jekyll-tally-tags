@@ -1,7 +1,7 @@
 module Jekyll
   module TallyTags
 
-    
+
 
     class YearPage < TallyTags::BasePage
 
@@ -48,17 +48,18 @@ module Jekyll
             templates_hash = yml_temp_hash[date]
             templates_hash.each_key do |temp_keys|
               temp    = temp_keys.keys[0]
-              content += "  #{temp}:\n"
+              # content += "  #{temp}:\n"
               keys    = temp_keys.values[0]
               hash    = templates_hash[temp_keys]
               lengths = hash[MAX_LENGTH]
               # content += "    - #{center_values(keys, lengths, sep)}\n"
               hash[VALUES].each_index do |index|
                 values  = hash[VALUES][index]
-                content += "    - #{center_values(values, lengths, sep)}\n"
+                content += "  - #{center_values(values, lengths, sep)}\n"
               end
-              content += "\n"
+              # content += "\n"
             end
+            content += "\n"
           end
           content += "```"
         end

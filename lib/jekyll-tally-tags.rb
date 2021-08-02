@@ -8,7 +8,6 @@ module Jekyll
 
     autoload :DocsToItems, "jekyll-tally-tags/docs_to_items"
     autoload :Item, "jekyll-tally-tags/item"
-    autoload :ItemsToPage, "jekyll-tally-tags/items_to_page"
     autoload :Methods, "jekyll-tally-tags/methods"
     autoload :Utils, "jekyll-tally-tags/utils"
     autoload :BasePage, "jekyll-tally-tags/pages/base_page"
